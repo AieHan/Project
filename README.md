@@ -29,17 +29,6 @@ The tool addresses a critical cybersecurity gap: according to recent data, **81%
 | **Dark Mode** | Toggleable dark theme with localStorage persistence |
 | **Show/Hide Password** | Visual toggle for password visibility |
 
-### Educational Content
-- **Security Blog** - 4 in-depth articles on password security, 2FA, phishing awareness
-- **FAQ Section** - Answers to common security questions
-- **Contact Form** - User feedback and inquiry system
-
-### Technical Features
-- Fully responsive design (mobile, tablet, desktop)
-- No external dependencies or frameworks
-- Zero data transmission (all processing occurs locally in browser)
-- LocalStorage API for user preferences and history
-
 ---
 
 ## 🛠️ Technologies Used
@@ -60,3 +49,4 @@ This project uses **vanilla JavaScript** to demonstrate fundamental understandin
 
 ## 📸 Screenshots
 
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/9004b39d-3290-4cbf-be36-2dde0df112dd" />
