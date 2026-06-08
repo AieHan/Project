@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Blog | Password Strength Checker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🔐 PassGuard</div>
+        <div class="nav-links">
+            <a href="index.html">Checker</a>
+            <a href="about.html">About</a>
+            <a href="blog.html" class="active">Security Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button id="darkModeToggle" class="dark-btn">🌙 Dark</button>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>📖 Security Awareness Blog</h1>
+            <p>Tips, tricks, and best practices to keep your accounts safe</p>
+        </section>
+
+        <div class="blog-container">
+            <!-- Blog Post 1 -->
+            <article class="blog-post">
+                <div class="post-header">
+                    <h2>🔐 Why "Password123" Won't Cut It Anymore</h2>
+                    <div class="post-meta">
+                        <span>📅 June 7, 2026</span>
+                        <span>⏱️ 5 min read</span>
+                        <span>🏷️ Password Security</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Every second, hackers try thousands of password combinations. Simple passwords like "password123" or "qwerty" can be cracked in milliseconds. Here's what you need to know:</p>
+                    
+                    <h3>📊 The Reality Check</h3>
+                    <ul>
+                        <li><strong>81%</strong> of data breaches involve weak or stolen passwords</li>
+                        <li><strong>65%</strong> of people reuse passwords across multiple sites</li>
+                        <li>A <strong>6-character password</strong> can be cracked instantly</li>
+                        <li>A <strong>12-character password</strong> with mixed characters takes centuries to crack</li>
+                    </ul>
+
+                    <h3>✅ How to Create Strong Passwords</h3>
+                    <div class="tips-box">
+                        <p>✓ Use at least <strong>12-16 characters</strong></p>
+                        <p>✓ Mix <strong>uppercase, lowercase, numbers, and symbols</strong></p>
+                        <p>✓ Avoid <strong>personal information</strong> (birthdays, names)</p>
+                        <p>✓ Don't use <strong>common patterns</strong> (123456, qwerty, abc123)</p>
+                        <p>✓ Use a <strong>password manager</strong> to generate and store unique passwords</p>
+                    </div>
+
+                    <div class="pro-tip">
+                        💡 <strong>Pro Tip:</strong> Try the passphrase method! "PurpleElephant$JumpsOver9Clouds" is strong AND memorable.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post">
+                <div class="post-header">
+                    <h2>🛡️ Two-Factor Authentication: Your Account's Best Friend</h2>
+                    <div class="post-meta">
+                        <span>📅 June 1, 2026</span>
+                        <span>⏱️ 4 min read</span>
+                        <span>🏷️ 2FA | Security</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Even the strongest password can be stolen. That's where Two-Factor Authentication (2FA) saves the day. 2FA adds a second layer of security that hackers can't easily bypass.</p>
+
+                    <h3>🔒 Types of 2FA (From Best to Worst)</h3>
+                    <ol>
+                        <li><strong>Security Keys</strong> (YubiKey) - Most secure, physical device</li>
+                        <li><strong>Authenticator Apps</strong> (Google Authenticator, Authy) - Very secure, time-based codes</li>
+                        <li><strong>SMS Codes</strong> - Better than nothing, but can be intercepted</li>
+                        <li><strong>Email Codes</strong> - Least secure, email can be hacked</li>
+                    </ol>
+
+                    <div class="stat-box">
+                        <strong>📈 99.9%</strong> of account takeovers can be prevented with 2FA enabled
+                    </div>
+
+                    <h3>✅ Which Accounts Need 2FA Most?</h3>
+                    <ul>
+                        <li>📧 Email accounts (gateway to all other accounts)</li>
+                        <li>🏦 Banking and financial services</li>
+                        <li>📱 Social media (Facebook, Instagram, Twitter/X)</li>
+                        <li>☁️ Cloud storage (Google Drive, iCloud, Dropbox)</li>
+                        <li>💻 GitHub (especially if you're a developer)</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-post">
+                <div class="post-header">
+                    <h2>⚠️ Spotting Phishing Attacks Before It's Too Late</h2>
+                    <div class="post-meta">
+                        <span>📅 May 25, 2026</span>
+                        <span>⏱️ 6 min read</span>
+                        <span>🏷️ Phishing | Awareness</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Phishing attacks increased by 47% last year. Hackers are getting smarter, but you can spot their tricks. Here's your guide to staying safe.</p>
+
+                    <h3>🚩 7 Red Flags of Phishing Emails</h3>
+                    <div class="warning-grid">
+                        <div class="warning-item">⚠️ <strong>Urgent language</strong> - "Your account will be closed in 24 hours!"</div>
+                        <div class="warning-item">⚠️ <strong>Generic greetings</strong> - "Dear Customer" instead of your name</div>
+                        <div class="warning-item">⚠️ <strong>Suspicious sender email</strong> - "amaz0n-support@fake.com"</div>
+                        <div class="warning-item">⚠️ <strong>Spelling/grammar errors</strong> - Professional companies proofread</div>
+                        <div class="warning-item">⚠️ <strong>Unexpected attachments</strong> - Don't open unknown files</div>
+                        <div class="warning-item">⚠️ <strong>Links that don't match</strong> - Hover before clicking!</div>
+                        <div class="warning-item">⚠️ <strong>Requests for personal info</strong> - Real companies never ask via email</div>
+                    </div>
+
+                    <h3>🎯 Real Example: Before You Click</h3>
+                    <div class="example-box">
+                        <p><strong>Fake email:</strong> "We noticed suspicious activity on your PayPal account. Click here to verify your identity immediately or your account will be suspended."</p>
+                        <p><strong>What to do:</strong> DON'T click the link. Open your browser, go to PayPal directly, and check your account status there.</p>
+                    </div>
+
+                    <div class="pro-tip">
+                        💡 <strong>Golden Rule:</strong> When in doubt, don't click it out! Navigate to the website directly instead of using email links.
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 - Bonus -->
+            <article class="blog-post">
+                <div class="post-header">
+                    <h2>🔑 Why You Need a Password Manager (Even as a Student)</h2>
+                    <div class="post-meta">
+                        <span>📅 May 18, 2026</span>
+                        <span>⏱️ 3 min read</span>
+                        <span>🏷️ Password Manager | Tools</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Remembering 50+ unique passwords is impossible. That's why security experts recommend password managers. Here's why they're safe and how to start.</p>
+
+                    <h3>✅ Benefits of Password Managers</h3>
+                    <ul>
+                        <li>🔐 <strong>Generate strong passwords</strong> - No more "password123"</li>
+                        <li>💾 <strong>Store everything securely</strong> - Like a digital vault</li>
+                        <li>📱 <strong>Sync across devices</strong> - Phone, laptop, tablet</li>
+                        <li>⚡ <strong>Auto-fill logins</strong> - Saves time</li>
+                        <li>⚠️ <strong>Alert you to breaches</strong> - Tells you if your passwords are compromised</li>
+                    </ul>
+
+                    <h3>🏆 Best Free Password Managers</h3>
+                    <div class="recommendation-box">
+                        <p>🔹 <strong>Bitwarden</strong> - Open source, completely free, highly recommended</p>
+                        <p>🔹 <strong>KeePass</strong> - Offline, maximum control</p>
+                        <p>🔹 <strong>Apple Keychain</strong> - Built into Apple devices</p>
+                        <p>🔹 <strong>Google Password Manager</strong> - Built into Chrome, basic but useful</p>
+                    </div>
+
+                    <div class="pro-tip">
+                        💡 <strong>Pro Tip:</strong> Start with Bitwarden. It's free, secure, and works on all devices. Remember: ONE master password to rule them all - make it strong!
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>🔒 Stay safe online | Follow for more security tips | <a href="contact.html">Have a question?</a></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

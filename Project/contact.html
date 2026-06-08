@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Password Strength Checker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🔐 PassGuard</div>
+        <div class="nav-links">
+            <a href="index.html">Checker</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Security Blog</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+        <button id="darkModeToggle" class="dark-btn">🌙 Dark</button>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>📬 Get in Touch</h1>
+            <p>Have questions, feedback, or security concerns? We'd love to hear from you.</p>
+        </section>
+
+        <div class="contact-wrapper">
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" onsubmit="return handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="feedback">Feedback about the tool</option>
+                            <option value="question">Security question</option>
+                            <option value="bug">Report a bug</option>
+                            <option value="collaboration">Collaboration opportunity</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            Subscribe to security tips newsletter (no spam)
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">📧 Send Message</button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+
+            <!-- Contact Information Sidebar -->
+            <div class="contact-info-container">
+                <div class="info-card">
+                    <h3>📧 Email Us</h3>
+                    <p><a href="mailto:security@passguard.com">security@passguard.com</a></p>
+                    <small>Response within 24-48 hours</small>
+                </div>
+
+                <div class="info-card">
+                    <h3>🐙 GitHub</h3>
+                    <p><a href="https://github.com/YOUR_USERNAME" target="_blank">github.com/YOUR_USERNAME</a></p>
+                    <small>Check out my other projects</small>
+                </div>
+
+                <div class="info-card">
+                    <h3>💼 Project Portfolio</h3>
+                    <p>This tool is part of my<br><strong>CSD34203 - Individual Project Portfolio</strong></p>
+                    <small>Student at [Your University Name]</small>
+                </div>
+
+                <div class="info-card">
+                    <h3>🔒 Security Disclosure</h3>
+                    <p>If you discover a security vulnerability in this tool, please email me directly with details. Responsible disclosure is appreciated.</p>
+                </div>
+
+                <div class="info-card social-links">
+                    <h3>🌐 Connect With Me</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">🔗 LinkedIn</a>
+                        <a href="#" class="social-icon">🐦 Twitter/X</a>
+                        <a href="#" class="social-icon">📧 Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>❓ Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Does this tool store my passwords?</h4>
+                    <p>No! Your passwords are never sent to any server. Everything runs locally in your browser. The history only stores strength scores, not actual passwords.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is this tool free to use?</h4>
+                    <p>Yes, completely free! It's an open-source educational project.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I use this for my organization?</h4>
+                    <p>Absolutely! Feel free to share it with your team. For custom features, reach out via email.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How accurate is the strength checker?</h4>
+                    <p>The checker follows industry best practices. For maximum security, always combine strong passwords with 2FA.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>🔒 Your privacy matters | This tool does NOT store or transmit your passwords</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+    <!-- Contact form handling script -->
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const newsletter = document.getElementById('newsletter').checked;
+            
+            // Simple validation
+            if (!name || !email || !subject || !message) {
+                showStatus('Please fill in all required fields.', 'error');
+                return false;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showStatus('Please enter a valid email address.', 'error');
+                return false;
+            }
+            
+            // Show success message (demo - doesn't actually send email)
+            const subjectText = document.getElementById('subject').options[document.getElementById('subject').selectedIndex].text;
+            
+            let successMessage = `✅ Thank you ${name}! Your message has been sent.<br><br>`;
+            successMessage += `<strong>Subject:</strong> ${subjectText}<br>`;
+            successMessage += `<strong>Message:</strong> "${message.substring(0, 100)}${message.length > 100 ? '...' : ''}"<br><br>`;
+            successMessage += `📧 We'll respond to <strong>${email}</strong> within 24-48 hours.<br><br>`;
+            
+            if (newsletter) {
+                successMessage += `📬 You've been subscribed to our security newsletter!<br><br>`;
+            }
+            
+            successMessage += `<small>Note: This is a demo. In a real implementation, this would send an email.</small>`;
+            
+            showStatus(successMessage, 'success');
+            
+            // Clear form (optional - comment out if you want to keep values)
+            // document.getElementById('contactForm').reset();
+            
+            return false;
+        }
+        
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('formStatus');
+            statusDiv.innerHTML = message;
+            statusDiv.className = `form-status ${type}`;
+            statusDiv.style.display = 'block';
+            
+            // Auto hide after 10 seconds for success, 15 for others
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, type === 'success' ? 10000 : 15000);
+            
+            // Scroll to status message
+            statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>

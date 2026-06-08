@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker | Secure Your Accounts</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🔐 PassGuard</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Checker</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Security Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button id="darkModeToggle" class="dark-btn">🌙 Dark</button>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>🔒 Password Strength Checker</h1>
+            <p>Test your password security in real-time | Get instant feedback</p>
+        </section>
+
+        <div class="checker-container">
+            <!-- Password Input Area -->
+            <div class="input-group">
+                <label for="password">Enter Password to Test:</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Type a password..." autocomplete="off">
+                    <button id="toggleVisibility" class="toggle-eye">👁️</button>
+                </div>
+            </div>
+
+            <!-- Strength Meter -->
+            <div class="strength-section">
+                <div class="strength-meter-container">
+                    <div class="strength-bar">
+                        <div id="strengthFill" class="strength-fill"></div>
+                    </div>
+                    <div id="strengthLabel" class="strength-label">Enter a password</div>
+                </div>
+            </div>
+
+            <!-- Detailed Results -->
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>📊 Statistics</h3>
+                    <div class="stat-item">
+                        <span>Length:</span>
+                        <span id="length">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Uppercase:</span>
+                        <span id="uppercase">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Lowercase:</span>
+                        <span id="lowercase">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Numbers:</span>
+                        <span id="numbers">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Symbols:</span>
+                        <span id="symbols">0</span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <h3>⚠️ Issues Found</h3>
+                    <ul id="issuesList">
+                        <li>No password entered yet</li>
+                    </ul>
+                </div>
+
+                <div class="result-card">
+                    <h3>💡 Suggestions</h3>
+                    <ul id="suggestionsList">
+                        <li>Type a password to see suggestions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Password Generator -->
+            <div class="generator-section">
+                <h2>🎲 Generate Strong Password</h2>
+                <div class="generator-controls">
+                    <label><input type="checkbox" id="includeUpper" checked> A-Z</label>
+                    <label><input type="checkbox" id="includeLower" checked> a-z</label>
+                    <label><input type="checkbox" id="includeNumbers" checked> 0-9</label>
+                    <label><input type="checkbox" id="includeSymbols" checked> !@#$%</label>
+                    <label>Length: <input type="number" id="passwordLength" min="8" max="32" value="16"></label>
+                    <button id="generateBtn" class="generate-btn">Generate Password</button>
+                </div>
+                <div class="generated-password">
+                    <input type="text" id="generatedPassword" readonly>
+                    <button id="copyBtn" class="copy-btn">📋 Copy</button>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="history-section">
+                <h2>📜 Recently Checked Passwords</h2>
+                <ul id="historyList"></ul>
+                <button id="clearHistory" class="clear-btn">Clear History</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>🔒 Never share your passwords | This tool does not store actual passwords, only strength scores</p>
+    </footer>
+
+    <script src="js/checker.js"></script>
+    <script src="js/generator.js"></script>
+    <script src="js/history.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
